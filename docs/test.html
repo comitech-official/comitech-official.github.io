@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <!-- メタデータ -->
+    <head>
+        <!--テストファイルのため検索エンジンに出ないようにする-->
+        <meta name="robots" content="noindex">
+        <meta charset="utf-8">
+        <!-- スマホで文字サイズが正常に表示されるための呪文 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ホーム - 工大祭即売会準備会「こみてっく(仮)実行委員会」</title>
+        <!-- リセットcss：環境依存のデザイン差異を統一するため -->
+        <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header>
+            <a href="index.html" id="site_title">ここにヘッダーを作成</a>
+            
+            <input type="checkbox" id="nav_button">
+            <label class="nav_button" for="nav_button"></label>
+                
+            <ul id="nav" class="nav_menu">
+                <li><a href="index.html">トップ</a></li>
+                <li>サークル参加要項(工事中)</li>
+                <li>一般参加要項(工事中)</li>
+                <li>お問い合わせ(工事中)</li>
+            </ul>
+        </header>
+            
+        <div class="wrapper">
+
+            <!-- 本体 -->
+            <h1>見出し見出し</h1>
+
+            <p class="info_item">
+                hogehogehoge
+            </p>
+
+            <!-- フッター -->
+            <div id="footer">
+                <small>&copy;2025 こみてっく(仮)実行委員会</small>
+            </div>
+            
+        </div>
+            
+
+    </body>
+    <style>
+        @charset "utf-8";
+        /*サイト全体に適用予定*/
+        html{
+            font-size: 10px;
+        }
+        body{
+            font-size: 1.6rem;
+        }
+        #site_title{
+            font-size: 3.2rem;   
+            color: black;
+            text-decoration: none
+            padding: 1.6rem;
+        }
+        .wrapper{
+            margin: 1.6rem;
+        }
+        #nav{
+            padding: 0.8rem 0.8rem;
+            background-color: aquamarine;
+        }
+        #nav li{
+            list-style-type: none;
+            display: inline;
+            padding: 0.8rem 1.6rem;
+            margin: 0;
+            background-color: aquamarine;
+            color: gray;
+        }
+
+        #footer {
+            color: gray;
+        }
+
+        /*メニュー開閉ボタンの非表示*/
+        #nav_button{
+            display: none;
+        }
+
+        
+        /* スマホの時のみ使用 */
+        @media screen and (max-width: 720px) {
+            #nav li{
+                display: block;
+            }
+            #nav{
+                padding: 0;
+            }
+
+
+            /*!--メニューボタン周りの実装--*/    
+            #nav_button{
+                display: none;
+            }
+            .nav_button{
+                display: inline-block;
+                background: aquamarine;
+                width: 100%;
+                padding: 0.8rem 1.6rem;
+                cursor: pointer;
+            }
+            #nav_button + .nav_button::after {
+                content: "▼ メニューを開く";
+            }
+            #nav_button:checked + .nav_button::after {
+                content: "▲ メニューを閉じる";
+            }
+            .nav_menu{
+                display: none;
+            }
+            #nav_button:checked+label+.nav_menu{
+                display: initial;
+            }
+        }
+
+    </style>
+</html>
