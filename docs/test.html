@@ -14,22 +14,22 @@
         
     </head>
     <body>
-        <!-- ヘッダー -->
-        <header>
-            <a href="index.html" id="site_title">ここにヘッダーを作成</a>
-            
-            <input type="checkbox" id="nav_button">
-            <label class="nav_button" for="nav_button"></label>
-                
-            <ul id="nav" class="nav_menu">
-                <li><a href="index.html">トップ</a></li>
-                <li>サークル参加要項(工事中)</li>
-                <li>一般参加要項(工事中)</li>
-                <li>お問い合わせ(工事中)</li>
-            </ul>
-        </header>
-            
         <div class="wrapper">
+            <!-- ヘッダー -->
+            <header>
+                <a href="index.html" id="site_title">ここにヘッダーを作成</a>
+                
+                <input type="checkbox" id="nav_button">
+                <label class="nav_button" for="nav_button"></label>
+                    
+                <ul id="nav" class="nav_menu">
+                    <li><a href="index.html">トップ</a></li>
+                    <li>サークル参加要項(工事中)</li>
+                    <li>一般参加要項(工事中)</li>
+                    <li>お問い合わせ(工事中)</li>
+                </ul>
+            </header>
+                
 
             <!-- 本体 -->
             <h1>タイトル</h1>
@@ -76,6 +76,12 @@
         body{
             font-size: 1.6rem;
             font-family: sans-serif;
+            
+            /*変数定義*/
+            --side-color: #bbd4ef;
+            --base-color: #6c9bd2;
+            --zabton-color: aquamarine;
+            background-color: var(--side-color);
         }
         p{
             margin: 1.6rem 1.6rem 0;
@@ -85,7 +91,7 @@
         h1{
             margin: 1.6rem 1.6rem 0;
             padding: 0 1.6rem ;
-            border-bottom: 0.2rem solid aquamarine;
+            border-bottom: 0.2rem solid var(--zabton-color);
         }
         h2,h3{
             margin: 3.2rem 1.6rem 0;
@@ -99,11 +105,15 @@
             padding: 1.6rem;
         }
         .wrapper{
-            margin: 1.6rem;
+            max-width: 1080px;
+            margin: 0 auto;
+            background-color: white;
+            min-height: 100vh;
+            min-height: 100dvh;
         }
         #nav{
             padding: 0.8rem 0.8rem;
-            background-color: aquamarine;
+            background-color: var(--zabton-color);
             text-align: center;
         }
         #nav li{
@@ -111,14 +121,14 @@
             display: inline;
             padding: 0.8rem 1.6rem;
             margin: 0;
-            background-color: aquamarine;
+            background-color: var(--zabton-color);
             color: gray;
         }
 
         #footer {
             color: gray;
             text-align: center;
-            border-top: 0.1rem solid aquamarine;
+            border-top: 0.1rem solid var(--zabton-color);
             margin: 3.2rem 1.6rem 0;
             padding:0;
         }
@@ -146,7 +156,7 @@
             }
             .nav_button{
                 display: inline-block;
-                background: aquamarine;
+                background: var(--zabton-color);
                 width: 100%;
                 padding: 0.8rem 1.6rem;
                 cursor: pointer;
