@@ -1,0 +1,124 @@
+
+@charset "utf-8";
+/*サイト全体に適用予定*/
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.6rem;
+    font-family: sans-serif;
+    
+    /*変数定義*/
+    --side-color: #bbd4ef;
+    --base-color: #6c9bd2;
+    --zabton-color: #50a4ff;
+    --darkblue-color: #1d298b;
+    background-color: var(--side-color);
+}
+p{
+    margin: 1.6rem 1.6rem 0;
+    padding: 0 1.6rem ;
+
+}
+h1{
+    margin: 1.6rem 1.6rem 0;
+    padding: 0 1.6rem ;
+    border-bottom: 0.2rem solid var(--zabton-color);
+}
+h2,h3{
+    margin: 3.2rem 1.6rem 0;
+    padding: 0 1.6rem ;
+    
+}
+ul{
+    margin-left: 5.6rem;
+}
+
+#site_title{
+    font-size: 3.2rem;   
+    color: black;
+    text-decoration: none;
+    padding: 1.6rem;
+}
+.wrapper{
+    max-width: 1080px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+#nav{
+    margin: 0;
+    padding: 0.8rem 0.8rem;
+    background-color: var(--zabton-color);
+    text-align: center;
+}
+#nav li{
+    list-style-type: none;
+    display: inline;
+    padding: 0.8rem 1.6rem;
+    margin: 0;
+    background-color: var(--zabton-color);
+}
+#nav a li:hover{
+    background-color: var(--side-color);
+}
+
+#nav a{
+    color: black;
+    text-decoration: none;
+}
+#nav .construction{
+    color: lightgray;
+}
+
+#footer {
+    color: gray;
+    text-align: center;
+    border-top: 0.2rem solid var(--zabton-color);
+    margin: 3.2rem 1.6rem 0;
+    padding:0;
+}
+
+/*メニュー開閉ボタンの非表示*/
+#nav_button{
+    display: none;
+}
+
+
+
+/* スマホの時のみ使用 */
+@media screen and (max-width: 720px) {
+    #nav li{
+        display: block;
+    }
+    #nav{
+        padding: 0;
+    }
+
+
+    /*!--メニューボタン周りの実装--*/    
+    #nav_button{
+        display: none;
+    }
+    .nav_button{
+        display: inline-block;
+        background: var(--zabton-color);
+        width: 100%;
+        padding: 0.8rem 1.6rem;
+        cursor: pointer;
+        text-align: center;
+    }
+    #nav_button + .nav_button::after {
+        content: "▼ メニューを開く";
+    }
+    #nav_button:checked + .nav_button::after {
+        content: "▲ メニューを閉じる";
+    }
+    .nav_menu{
+        display: none;
+    }
+    #nav_button:checked+label+.nav_menu{
+        display: initial;
+    }
+}
