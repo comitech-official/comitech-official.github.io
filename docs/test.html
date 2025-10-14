@@ -7,7 +7,15 @@
         <meta charset="utf-8">
         <!-- スマホで文字サイズが正常に表示されるための呪文 -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>ホーム - 工大祭即売会準備会「こみてっく(仮)実行委員会」</title>
+        <!-- ogp設定用 -->
+        <meta property="og:title" content="トップ">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://comitech-official.github.io">
+        <!--meta property="og:image" content="画像のURL"-->
+        <meta property="og:site_name" content="こみてっく(仮)">
+        <meta property="og:description" content="工大祭即売会準備会「こみてっく」のウェブサイト。">
+        <meta property="og:locale" content="jp">
+        <title>トップ - 工大祭即売会準備会「こみてっく(仮)実行委員会」</title>
         <!-- リセットcss：環境依存のデザイン差異を統一するため -->
         <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -23,10 +31,10 @@
                 <label class="nav_button" for="nav_button"></label>
                     
                 <ul id="nav" class="nav_menu">
-                    <li><a href="index.html">トップ</a></li>
-                    <li>サークル参加要項(工事中)</li>
-                    <li>一般参加要項(工事中)</li>
-                    <li>お問い合わせ(工事中)</li>
+                    <a href="index.html"><li>トップ</li></a>
+                    <li class="construction">サークル参加要項(工事中)</li>
+                    <li class="construction">一般参加者のみなさまへ(工事中)</li>
+                    <a href="contactus.html"><li>お問い合わせ</li></a>
                 </ul>
             </header>
                 
@@ -123,16 +131,23 @@
             padding: 0.8rem 1.6rem;
             margin: 0;
             background-color: var(--zabton-color);
-            color: lightgray;
         }
+        #nav a li:hover{
+            background-color: var(--side-color);
+        }
+        
         #nav a{
-            color: var(--darkblue-color);
+            color: black;
+            text-decoration: none;
+        }
+        #nav .construction{
+            color: lightgray;
         }
 
         #footer {
             color: gray;
             text-align: center;
-            border-top: 0.1rem solid var(--zabton-color);
+            border-top: 0.2rem solid var(--zabton-color);
             margin: 3.2rem 1.6rem 0;
             padding:0;
         }
