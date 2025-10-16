@@ -4,6 +4,9 @@
 html{
     font-size: 10px;
 }
+header{
+    padding-top: 1.6rem;
+}
 body{
     font-size: 1.6rem;
     font-family: sans-serif;
