@@ -26,8 +26,9 @@
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-ZKEJQ8YVYS');
+            
+            window.SITE_URL = "{{ site.url | escape }}"; //for link_format.js
         </script>
         <script src="{{ '/assets/js/link_format.js' | absolulte_url }}"></script>
     </head>

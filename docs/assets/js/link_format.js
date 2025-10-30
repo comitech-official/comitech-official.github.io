@@ -2,7 +2,8 @@
 // 本当はデプロイ時に操作出来たらよいのですが、github page そのままでは難しいためこのような実装としています。
 document.addEventListener("DOMContentLoaded", () => {
     // Jekyllのsite.urlをJS変数に埋め込む
-    const siteUrl = "{{ site.url }}".replace(/\/$/, ""); // 末尾の / を削除
+    //const siteUrl = "{{ site.url }}".replace(/\/$/, ""); // 末尾の / を削除
+    const siteUrl = (window.SITE_URL || "").replace(/\/$/, "");
 
     document.querySelectorAll("a[href]").forEach(a => {
         const href = a.getAttribute("href");
