@@ -1,0 +1,23 @@
+title: 工大祭即売会準備会「こみてっく！(仮)準備会」
+description: >
+  工大祭即売会「こみてっく！」のウェブサイト。
+baseurl: ""
+url: "https://comitech-official.github.io"
+
+author:
+  name: こみてっく！(仮)準備会
+  email: comitech.official@gmail.com
+  github: comitech-official
+  twitter: comitech_offic
+
+plugins:
+  - jekyll-paginate
+paginate: 5
+paginate_path: page:num
+
+sass:
+  style: expanded
+
+gems:
+  - jekyll-paginate
+  - jekyll-feed

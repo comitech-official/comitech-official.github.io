@@ -1,72 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <!-- メタデータ -->
-    <head>
-        <!--テストファイルのため検索エンジンに出ないようにする：削除予定-->
-        <meta name="robots" content="noindex">
-        <meta charset="utf-8">
-        <!-- スマホで文字サイズが正常に表示されるための呪文 -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- ogp設定用 -->
-        <meta property="og:title" content="404 not found">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://comitech-official.github.io/404">
-        <meta property="og:image" content="https://comitech-official.github.io/public/images/ogp.png">
-        <meta property="og:site_name" content="こみてっく！(仮)">
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:image" content="https://comitech-official.github.io/public/images/twitter_ogp.png">
-        <meta property="og:description" content="工大祭即売会準備会「こみてっく！」のウェブサイト。">
-        <meta property="og:locale" content="jp">
-        <title>404 not found - 工大祭即売会準備会「こみてっく！(仮)準備会」</title>
-        <!-- リセットcss：環境依存のデザイン差異を統一するため -->
-        <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="icon" href="https://comitech-official.github.io/public/images/favicon.png">
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKEJQ8YVYS"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-ZKEJQ8YVYS');
-        </script>
-        
-    </head>
-    <body>
-        <div class="wrapper">
-            <!-- ヘッダー -->
-            <header>
-                <a href="https://comitech-official.github.io" id="site_title">
-                    <img src="https://comitech-official.github.io/public/images/logo.png" alt="工大祭同人即売会「こみてっく！」ロゴ" width="240" height="90">
-                </a>
-                
-                <input type="checkbox" id="nav_button">
-                <label class="nav_button" for="nav_button"></label>
-                    
-                <ul id="nav" class="nav_menu">
-                    <a href="https://comitech-official.github.io"><li>トップ</li></a>
-                    <li class="construction">サークル・一般参加の皆様へ(工事中)</li>
-                    <a href="https://comitech-official.github.io/staff"><li>スタッフ募集中！！</li></a>
-                    <a href="https://comitech-official.github.io/contact"><li>お問い合わせ</li></a>
-                </ul>
-            </header>
-                
-
-            <!-- 本体 -->
-            <h1>404 not found</h1>
-
+---
+layout: default
+title: 404 not found
+---
             <p class="info_item">
-                　このページは存在しません。<a href="https://comitech-official.github.io">トップページ</a>へはこちらから。
+                　このページは存在しません。<a href="{{ '/' | absolulte_url }}">トップページ</a>へはこちらから。
             </p>
-
-            <!-- フッター -->
-            <div id="footer">
-                <small>&copy;2025 こみてっく！(仮)準備会</small>
-            </div>
-            
-        </div>
-            
-
-    </body>
-</html>
