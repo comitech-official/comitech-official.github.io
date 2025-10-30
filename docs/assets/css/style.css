@@ -19,6 +19,7 @@ body{
     background-color: var(--side-color);
 }
 p{
+    line-height: 2.8rem;
     margin: 1.6rem 1.6rem 0;
     padding: 0 1.6rem ;
 
@@ -35,6 +36,13 @@ h2,h3{
 }
 ul{
     margin-left: 5.6rem;
+    margin-right: 1.6rem;
+}
+li ul{
+    margin-left: 2rem;
+}
+li{
+    line-height: 2.8rem;
 }
 
 #site_title{
