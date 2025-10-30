@@ -12,7 +12,7 @@
         <meta property="og:image" content="{{ '/assets/images/ogp.png' | absolulte_url }}">
         <meta property="og:site_name" content="{{ site.title }}">
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:image" content="{{ '/assets/images/twitter_ogp.png' | absolulte_url }}">
+        <meta name="twitter:image" content={{ site.url }}/assets/images/twitter_ogp.png>
         <meta property="og:description" content="{{ page.description }}">
         <meta property="og:locale" content="jp">
         <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
