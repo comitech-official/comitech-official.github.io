@@ -10,7 +10,7 @@
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ '/' | absolulte_url }}">
         <meta property="og:image" content="{{ '/assets/images/ogp.png' | absolulte_url }}">
-        <meta property="og:site_name" content="こみてっく！(仮)">
+        <meta property="og:site_name" content="{{ site.title }}">
         <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="{{ '/assets/images/twitter_ogp.png' | absolulte_url }}">
         <meta property="og:description" content="{{ page.description }}">
@@ -29,7 +29,7 @@
 
             gtag('config', 'G-ZKEJQ8YVYS');
         </script>
-        
+        <script src="{{ '/assets/js/link_format.js' | absolulte_url }}"></script>
     </head>
     <body>
         <div class="wrapper">
