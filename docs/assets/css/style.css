@@ -5,6 +5,7 @@ html{
     font-size: 10px;
 }
 header{
+    margin: 0 -3.2rem;
     padding-top: 1.6rem;
 }
 body{
@@ -18,28 +19,29 @@ body{
     --darkblue-color: #1d298b;
     background-color: var(--side-color);
 }
+.wrapper{
+    padding: 0 3.2rem;
+    margin-top: 0;
+}
 p{
     line-height: 2.8rem;
-    margin: 1.6rem 1.6rem 0;
-    padding: 0 1.6rem ;
+    margin: 1.6rem 0 0;
 
 }
 h1{
-    margin: 1.6rem 1.6rem 0;
-    padding: 0 1.6rem ;
+    margin: 1.6rem 0 0;
+    padding: 0 -1.6rem ;
     border-bottom: 0.2rem solid var(--zabton-color);
 }
 h2,h3{
-    margin: 3.2rem 1.6rem 0;
-    padding: 0 1.6rem ;
+    margin: 3.2rem 0 0;
     
 }
 ul{
-    margin-left: 5.6rem;
-    margin-right: 1.6rem;
+    padding-left: 4rem;
 }
 li ul{
-    margin-left: 2rem;
+    padding-left: 2rem;
 }
 li{
     line-height: 2.8rem;
@@ -90,7 +92,7 @@ h2+h3,h2+p,h3+p{
     color: gray;
     text-align: center;
     border-top: 0.2rem solid var(--zabton-color);
-    margin: 3.2rem 1.6rem 0;
+    margin: 3.2rem 0 0;
     padding:0;
 }
 
