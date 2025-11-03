@@ -1,0 +1,161 @@
+---
+layout: default
+title: 【テスト】名称を変更してください
+description: 工大祭即売会準備会「こみてっく！」のウェブサイト。
+---
+<p>サークル一覧テスト</p>
+{% for item in site.data.circles %}
+    <!-- トリガーボタン -->
+    <button class="open-overlay" data-target="{{ item.title }}">{{ item.title }}</button>
+    <!-- オーバーレイ1 -->
+    <div id="{{ item.title }}" class="overlay" aria-hidden="true">
+        <div class="overlay-content" role="dialog" aria-modal="true">
+            <button class="close-btn" aria-label="閉じる">×</button>
+            <h2>{{ item.title }}</h2>
+            <p>ここはオーバーレイ1の内容です。</p>
+            <img src="example1.jpg" alt="例1" loading="lazy" style="max-width:100%;height:auto;">
+        </div>
+    </div>
+{% endfor %}
+
+
+<!-- button class="open-overlay" data-target="overlay3">詳細を見る（外部ロード例）</button>
+<-- オーバーレイ3: 外部HTMLを遅延読み込みする例 ->
+<div id="overlay3" class="overlay" aria-hidden="true" data-src="/overlay-contents/overlay3.html">
+  <div class="overlay-content" role="dialog" aria-modal="true">
+    <button class="close-btn" aria-label="閉じる">×</button>
+    <div class="lazy-body">
+      <-- fetchで読み込んだ内容をここに挿入 ->
+      <p>（読み込み中）</p>
+    </div>
+  </div>
+</div -->
+<style>
+  /* オーバーレイの基本 */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+/* 表示状態 */
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* コンテンツ部分 */
+.overlay-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+/* 閉じるボタン */
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+</style>
+<script defer>
+document.addEventListener('DOMContentLoaded', () => {
+  const openButtons = document.querySelectorAll('.open-overlay');
+  const overlays = document.querySelectorAll('.overlay');
+
+  // 開く処理（共通関数）
+  const openOverlay = async (overlay) => {
+    if (!overlay) return;
+
+    // 外部読み込みが指定されている場合は一度だけ fetch する
+    const src = overlay.dataset.src;
+    if (src && !overlay.dataset.loaded) {
+      try {
+        const resp = await fetch(src, { method: 'GET' });
+        if (resp.ok) {
+          const html = await resp.text();
+          const container = overlay.querySelector('.lazy-body');
+          if (container) container.innerHTML = html;
+          overlay.dataset.loaded = 'true';
+        } else {
+          // 読み込み失敗時の簡易表示
+          const container = overlay.querySelector('.lazy-body');
+          if (container) container.innerHTML = '<p>コンテンツを読み込めませんでした。</p>';
+        }
+      } catch (err) {
+        const container = overlay.querySelector('.lazy-body');
+        if (container) container.innerHTML = '<p>読み込みエラーが発生しました。</p>';
+      }
+    }
+
+    // aria-hidden を false にして active クラスを付与
+    overlay.setAttribute('aria-hidden', 'false');
+    overlay.classList.add('active');
+
+    // フォーカスをオーバーレイ内に移す（アクセシビリティ）
+    const focusable = overlay.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    if (focusable) focusable.focus();
+  };
+
+  // 閉じる処理（共通関数）
+  const closeOverlay = (overlay) => {
+    if (!overlay) return;
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden', 'true');
+  };
+
+  // ボタンにイベントを追加
+  openButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const targetId = btn.dataset.target;
+      if (!targetId) return console.warn('open-overlay ボタンに data-target がありません', btn);
+      const overlay = document.getElementById(targetId);
+      if (!overlay) return console.warn('ターゲットの overlay が見つかりません:', targetId);
+      openOverlay(overlay);
+    });
+  });
+
+  // 各オーバーレイに閉じる・外クリック処理を付与（存在チェックあり）
+  overlays.forEach(overlay => {
+    // close button があるかどうかをチェックしてからイベント追加
+    const closeBtn = overlay.querySelector('.close-btn');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeOverlay(overlay);
+      });
+    }
+
+    // 外クリックで閉じる（overlay の直下クリックのみ）
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeOverlay(overlay);
+    });
+  });
+
+  // Escape で開いているものを全て閉じる
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      overlays.forEach(o => closeOverlay(o));
+    }
+  });
+
+});
+</script>
+
