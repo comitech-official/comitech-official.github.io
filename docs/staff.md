@@ -10,7 +10,7 @@ description: 工大祭即売会準備会「こみてっく！」のスタッフ�
 - 業務：企画/渉外/会計/デザイン/ホームページ作成/設営/誘導 etc……
 
 ## 応募方法
-　応募フォーム（[外部リンク](https://forms.gle/CtqWQyqwaf5u7Ty97)）からご応募いただくか、下記のメールまたはX（旧Twitter）DMに以下の内容をお送りください。
+　ページ下部の応募フォームからご応募いただくか、下記のメールまたはX（旧Twitter）DMに以下の内容をお送りください。
 
 ### 応募内容
 - 氏名
@@ -20,6 +20,25 @@ description: 工大祭即売会準備会「こみてっく！」のスタッフ�
 - XアカウントID（任意）
 
 ### 応募先
-- 応募フォーム：[こちら](https://forms.gle/CtqWQyqwaf5u7Ty97)
+- 応募フォーム：下記
 - メール（件名はスタッフ応募としてください。）：comitech.official[​a​t​]gmail.com（[​a​t​]をアットマークに置き換えてください）
 - X（旧Twitter）：[@Comitech_offic](https://x.com/Comitech_offic)
+
+<div class="staff_form">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScwAMwVO9JSDfqsJnCJtsLv4eB8bjJGFOyOkgFG5VK8IcBvrA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">now loading…</iframe>
+</div>
+
+<style>
+    .staff_form{
+        display: grid;
+        justify-items: center;
+    }
+    iframe {
+        margin: 2.4rem auto;
+        width: 100%;
+        max-width: 700px;
+        height: 800px;
+        overflow-y: scroll;
+        background-color: var(--zabton-color);
+    }
+</style>
