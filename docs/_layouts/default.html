@@ -53,6 +53,21 @@
             </header>
                 
 
+            <!-- 全ページ共通バナー -->
+            <a class="top_banner" href="{{ '/join' | absolulte_url }}">
+               <img class="top_banner_img" src="/assets/images/2026shinkan_banner.png" alt="新入生向け説明会予告ページの紹介バナー。">
+               <style>
+                    .top_banner {
+                        margin : 1rem auto;
+                        display: none; /*このパラメタを none - flex にすることで表示非表示を切り替える*/
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .top_banner_img {
+                        width: min(400px, calc(100vw - 4rem));
+                    }
+               </style>
+            </a>
             <!-- 本体 -->
             <h1>{{ page.title }}</h1>
             {{ content }}
