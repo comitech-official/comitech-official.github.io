@@ -13,6 +13,7 @@ description: 2026新歓特設ページです。
   - こちらの[グーグルフォーム](https://docs.google.com/forms/d/e/1FAIpQLSfhpSGxV9I7zZutim7zTRCfZtsj_j3LzUsMVzbpcb33ilgxcg/viewform)からご登録ください。
 - 4/14(火) 12:45- @TakiPlaza B2F ワークショップルーム2
 - 4/15(水) 12:45- @TakiPlaza B2F ワークショップルーム1
+
 昼休みに開催しますので、昼食は持ち込んでいただいても構いません。
 
 ### 出展に興味がある方へ
