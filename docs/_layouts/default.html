@@ -19,25 +19,43 @@
         <!-- リセットcss：環境依存のデザイン差異を統一するため -->
         <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
         <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolulte_url }}">
-        <link rel="icon" href="{{ '/assets/images/favicon.png' | absolulte_url }}">
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKEJQ8YVYS"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-ZKEJQ8YVYS');
-            
-            window.SITE_URL = "{{ site.url | escape }}"; //for link_format.js
-        </script>
+
+        {% if site.dev_mode %}
+            <!-- 開発環境用　-->
+            <link rel="stylesheet" href="{{ '/assets/css/dev.css' | absolulte_url }}">
+            <link rel="icon" href="{{ '/assets/images/favicon_dev.png' | absolulte_url }}">
+        {% else %}
+            <link rel="icon" href="{{ '/assets/images/favicon.png' | absolulte_url }}">
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKEJQ8YVYS"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-ZKEJQ8YVYS');
+                
+                window.SITE_URL = "{{ site.url | escape }}"; //for link_format.js
+            </script>
+        {% endif %}
+
         <script src="{{ '/assets/js/link_format.js' | absolulte_url }}"></script>
     </head>
     <body>
+        {% if site.dev_mode %}
+            <!-- 開発環境用　-->
+            <div class="env-badge">開発環境</div>
+            <link rel="stylesheet" href="{{ '/assets/css/dev.css' | absolulte_url }}">
+        {% endif %}
         <div class="wrapper">
             <!-- ヘッダー -->
             <header>
                 <a href="{{ '/' | absolulte_url }}" id="site_title">
-                    <img src="{{ '/assets/images/logo.png' | absolulte_url }}" alt="工大祭同人即売会「こみてっく！」ロゴ" width="240" height="90">
+                    {% if site.dev_mode %}
+                        <!-- 開発環境用　-->
+                        <img src="{{ '/assets/images/logo_dev.png' | absolulte_url }}" alt="工大祭同人即売会「こみてっく！」開発環境用ロゴ" width="240" height="90">
+                    {% else %}
+                        <img src="{{ '/assets/images/logo.png' | absolulte_url }}" alt="工大祭同人即売会「こみてっく！」ロゴ" width="240" height="90">
+                    {% endif %}
                 </a>
                 
                 <input type="checkbox" id="nav_button">
