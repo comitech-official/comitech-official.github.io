@@ -15,6 +15,9 @@
         <meta name="twitter:image" content={{ site.url }}/assets/images/twitter_ogp.png>
         <meta property="og:description" content="{{ page.description }}">
         <meta property="og:locale" content="jp">
+        {% if page.robots %}
+            <meta name="robots" content="{{ page.robots }}">
+        {% endif %}
         <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
         <!-- リセットcss：環境依存のデザイン差異を統一するため -->
         <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
@@ -72,8 +75,8 @@
                 
 
             <!-- 全ページ共通バナー -->
-            <a class="top_banner" href="{{ '/welcome_2026' | absolulte_url }}">
-               <img class="top_banner_img" src="/assets/images/welcome_2026_banner.png" alt="新入生向け説明会予告ページの紹介バナー。">
+            <a class="top_banner" href="{{ '/join#mail_form' | absolulte_url }}">
+               <img class="top_banner_img" src="/assets/images/mailing_list_banner.png" alt="メーリングリスト登録案内バナー。">
                <style>
                     .top_banner {
                         margin : 1rem auto;
