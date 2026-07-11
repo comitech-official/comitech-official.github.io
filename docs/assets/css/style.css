@@ -153,3 +153,18 @@ iframe {
     overflow-y: scroll;
     background-color: var(--zabton-color);
 }
+
+/*表関連*/
+table {
+  border-collapse: collapse;
+}
+table th, table td {
+  border: solid 1px var(--darkblue-color);
+}
+table th {
+  padding: 10px;
+  background-color: var(--side-color);
+}
+table td {
+  padding: 3px 10px;
+}
