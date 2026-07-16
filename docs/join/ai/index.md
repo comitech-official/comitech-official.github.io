@@ -13,15 +13,14 @@ robots: "noindex, nofollow"
 - [第１回こみてっく！生成AI規制規約](https://comitech-official.github.io/assets/pdfs/ai_2026/rule.pdf)
 
 ## 生成AI利用に関する説明スライド
-　PDFの埋め込みに対応していないブラウザでは、ご覧いただけない場合があります。表示されない場合には、上記リンクよりpdf版をご覧ください。
+　全3ページです。スマートフォン等、PDFの埋め込みに対応していないブラウザやご覧いただけない場合があります。表示されない場合には、上記リンクよりpdf版をご覧ください。
 <style>
-    object {
+    iframe {
         width: 100%;
         aspect-ratio: 1 / 1.5;
     }
 </style>
-<object data="/assets/pdfs/ai_2026/gaiyou.pdf" type="application/pdf">
-   <p>PDFの埋め込みに対応したブラウザをお使いいただくか、上記リンクよりダウンロードしてご覧ください。</p>
-</object>
+<iframe src="https://docs.google.com/gview?url=https://comitech-official.github.io/assets/pdfs/ai_2026/gaiyou.pdf&embedded=true" frameborder="0"
+></iframe>
 
 - 出展予定の頒布物についてのご相談、生成AIの取り扱いに関するご意見は[こちら](https://docs.google.com/forms/d/e/1FAIpQLSfIJhAgHvgFiooCQLXms74WrwZ4zl29SCjkazgIAvcRoB8IMw/viewform?usp=header)からお願いいたします。
