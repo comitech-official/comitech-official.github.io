@@ -12,7 +12,8 @@ robots: "noindex, nofollow"
 - [生成AI利用に関する説明スライド](https://comitech-official.github.io/assets/pdfs/ai_2026/gaiyou.pdf)
 - [第１回こみてっく！生成AI規制規約](https://comitech-official.github.io/assets/pdfs/ai_2026/rule.pdf)
 
-## 規約概要
+## 生成AI利用に関する説明スライド
+　PDFの埋め込みに対応していないブラウザでは、ご覧いただけない場合があります。表示されない場合には、上記リンクよりpdf版をご覧ください。
 <style>
     object {
         width: 100%;
