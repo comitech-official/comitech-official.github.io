@@ -13,6 +13,16 @@ body{
     font-family: sans-serif;
     
     /*変数定義*/
+    --logo-border: #203f87;
+    --ko: #646fb3;
+    --mi: #378dcd;
+    --te: #3bb58e;
+    --kk: #a1a2d0;
+    --ku: #4f84c4;
+    --ii: #0c858b;
+    --te-short: #2a62ae;
+    --ii-short: var(--te);
+
     --side-color: #bbd4ef;
     --base-color: #6c9bd2;
     --zabton-color: #50a4ff;
@@ -37,10 +47,10 @@ h2,h3{
     margin: 3.2rem 0 0;
     
 }
-ul{
+ul, ol {
     padding-left: 4rem;
 }
-li ul{
+li ul, li ol {
     padding-left: 2rem;
 }
 li{
@@ -152,4 +162,19 @@ iframe {
     height: 800px;
     overflow-y: scroll;
     background-color: var(--zabton-color);
+}
+
+/*表関連*/
+table {
+  border-collapse: collapse;
+}
+table th, table td {
+  border: solid 1px var(--darkblue-color);
+}
+table th {
+  padding: 10px;
+  background-color: var(--side-color);
+}
+table td {
+  padding: 3px 10px;
 }

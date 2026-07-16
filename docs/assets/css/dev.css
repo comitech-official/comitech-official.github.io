@@ -34,3 +34,9 @@
     color: red;
   }
 }
+
+@media print {
+  .env-badge {
+    display: none;
+  }
+}
