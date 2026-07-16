@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <!-- メタデータ -->
+  <head>
+    <meta charset="utf-8">
+    <!-- スマホで文字サイズが正常に表示されるための呪文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ogp設定用 -->
+    <meta property="og:title" content={% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} | {{ site.description}}{% endif %}>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ '/' | absolulte_url }}">
+    <meta property="og:image" content="{{ '/assets/images/ogp.png' | absolulte_url }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content={{ site.url }}/assets/images/twitter_ogp.png>
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:locale" content="jp">
+    {% if page.robots %}
+      <meta name="robots" content="{{ page.robots }}">
+    {% endif %}
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    {% if site.dev_mode %}
+      <!-- 開発環境用　-->
+      <link rel="stylesheet" href="{{ '/assets/css/dev.css' | absolulte_url }}">
+      <link rel="icon" href="{{ '/assets/images/favicon_dev.png' | absolulte_url }}">
+    {% else %}
+      <link rel="icon" href="{{ '/assets/images/favicon.png' | absolulte_url }}">
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKEJQ8YVYS"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZKEJQ8YVYS');
+        
+        window.SITE_URL = "{{ site.url | escape }}"; //for link_format.js
+      </script>
+    {% endif %}
+
+    <script src="{{ '/assets/js/link_format.js' | absolulte_url }}"></script>
+
+<!--以後追加分-->
+    <link	href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+<!--title>こみてっく！画像・動画生成AI利用ルール早見表 1/3</title-->
+<style>
+@page { size: A4; margin: 0; }
+
+:root {
+  --muted: #4b5563;
+  --paper: #ffffff;
+  
+  --logo-border: #203f87;
+  --ko: #646fb3;
+  --mi: #378dcd;
+  --te: #3bb58e;
+  --kk: #a1a2d0;
+  --ku: #4f84c4;
+  --ii: #0c858b;
+  --te-short: #2a62ae;
+  --ii-short: var(--te);
+
+  --side-color: #bbd4ef;
+  --base-color: #6c9bd2;
+  --zabton-color: #50a4ff;
+  --darkblue-color: #1d298b;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--side-color);
+  color: black;
+  font-family:
+    "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "Noto Sans JP", "Meiryo", sans-serif;
+  line-height: 1.34;
+}
+
+body {
+  display:flex;
+  justify-content:center;
+  padding:10px;
+}
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  background: var(--paper);
+  padding: 5.8mm 8.2mm 5.6mm;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.24);
+  overflow: hidden;
+  display: block;
+  position: relative;
+  flex-direction: column;
+}
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+    padding: 0;
+    background: white;
+  }
+  body { display: block; }
+  .page {
+    box-shadow: none;
+    width: 210mm;
+    height: 297mm;
+    page-break-after: always;
+  }
+}
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+}
+
+.section-wrapper section .section-title {
+  width: 100%;
+  gap: 4px;
+  margin: 0 0 4px;
+}
+.section-wrapper section .section-title h2 {
+  color: var(--darkblue-color);
+  font-size: 12pt;
+  font-weight: 900;
+  margin: 0;
+}    
+.section-wrapper section .section-title p {
+  color: var(--darkblue-color);
+  margin: 0;
+  font-size: 8pt;
+  font-weight:900;
+}
+
+.frame {
+  --frame-color: var(--darkblue-color);
+  border-radius: 4px;
+  border: 1px solid var(--frame-color);
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.frame.frame-fill {
+  background: color-mix(in srgb, var(--frame-color) 4%, transparent 96%);
+}
+.frame.frame-strong {
+  border: 2px solid var(--frame-color);
+}
+.frame > * {
+  padding: 0;
+}
+.frame.frame-row > *{
+  padding-bottom: 0;
+}
+.frame.frame-column > *{
+  padding-left: 0;
+  padding-right: 0;
+}
+.frame > h2 {
+  color: white;
+  background-color: var(--frame-color);
+}
+</style>
+</head>
+
+<body>
+<main class="page">
+  <header class="header">
+    <style>
+      .header{
+        margin-bottom:2.5mm;
+        border-bottom: 2px solid var(--zabton-color);
+      }
+      .header-top{
+        display: flex; 
+        justify-content: space-between;
+        font-size:9pt;
+        font-weight:700;
+        margin-bottom: 2mm;
+      }
+      .header-title{
+        margin:.8mm 0 0;
+        text-align:center;
+        font-size:24pt;
+        font-weight:950;
+        line-height:1.05;
+      }  
+      .header-title .red {
+        color: red;
+      }
+    </style>
+    <div class="header-top">
+      <div>{{ page.subtitle }} </div>
+      <div>{{ page.document-name }}</div>
+    </div>
+    <div class="header-title">
+      {{ page.title }}
+    </div>
+  </header>
+  <div class="section-wrapper">
+    {{ content }}
+  </div>
+  <footer class="footer">
+    <style>
+      /* footer */
+      .footer {
+        position: absolute;
+        left: 8.2mm;
+        right: 8.2mm;
+        bottom: 5.6mm;
+        display: grid;
+        grid-template-columns: 1fr 45mm;
+        grid-template-rows: 1fr auto;
+        column-gap: 3mm;
+        row-gap: 1mm;
+        align-items: stretch;
+      }
+
+      .footer-note {
+        grid-column: 1 / 2;
+        grid-row: 1;
+        border-top: 2px solid var(--zabton-color);
+        padding-top: .8mm;
+        display: grid;
+        grid-template-columns: 5mm minmax(0, 1fr);
+        gap: 0.8mm;
+        align-items: center;
+        font-size: 7.2pt;
+        line-height: 1.3;
+        font-weight: 850;
+        min-width: 0;
+      }
+
+      .comitech-logo {
+        grid-column: 1;
+        grid-row: 2;
+        align-self: end;
+        margin: 0;
+        height: 9mm;
+        width: auto;
+      }
+      .warning {
+        color: darkorange;
+        font-size: 12pt;
+        text-align: center;
+        line-height: 1;
+      }
+
+      .qr-box {
+        background: var(--darkblue-color);
+        color: #fff;
+        border-radius: 1.4mm;
+        padding: 1.2mm;
+        display: grid;
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        grid-template-columns: minmax(0, 1fr) 15mm;
+        gap: 1.5mm;
+        align-items: center;
+        font-size: 6.6pt;
+        font-weight: 950;
+      }
+
+      .qr-box > div:first-child { white-space: nowrap; }
+
+      .qr {
+        width: 15mm;
+        height: 15mm;
+        background:
+          #fff;
+        border: 1.2px solid white;
+        color: #111;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        font-size: 5pt;
+        line-height: 1.05;
+      }
+    </style>
+    <div class="footer-note">
+      <span class="warning material-symbols-outlined">warning</span>この資料は画像・動画生成AI利用に関する追加ルールの要約です。その他の事項は本会の通常ルールに従います。
+    </div>
+    <img class="comitech-logo" src="/assets/images/logo_junbikai.svg" alt="「こみてっく！準備会」ロゴ">
+    <div class="qr-box">
+      <div>規約本文はこちら ▶</div>
+      <img class="qr" src="/assets/images/ai_link.png" alt="「こみてっく！準備会」ロゴ">
+    </div>
+  </footer>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,497 @@
+---
+layout: document
+title: 画像・動画生成AI利用時の禁止事項早見表
+subtitle: こみてっく！生成AI利用ルール①
+document-name: 2026年度版
+robots: "noindex, nofollow"
+---
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-lora" viewBox="0 0 48 48">
+      <style>
+        .st0 {
+          font-family: UDShinGoPro-DeBold-90ms-RKSJ-H, 'A-OTF UD Shin Go Pro';
+          font-size: 12px;
+          font-weight: 700;
+        }
+      </style>
+      <path d="M7,35h34V13H7v22ZM7,35V13v22ZM10.5,42v-4h-3.5c-.8,0-1.5-.3-2.1-.9s-.9-1.3-.9-2.1V13c0-.8.3-1.5.9-2.1s1.3-.9,2.1-.9h3.5v-4h3v4h9v-4h3v4h9v-4h3v4h3.5c.8,0,1.5.3,2.1.9s.9,1.3.9,2.1v22c0,.8-.3,1.5-.9,2.1s-1.3.9-2.1.9h-3.5v4h-3v-4h-9v4h-3v-4h-9v4h-3Z"/>
+      <text class="st0" transform="translate(8.5 29.3)"><tspan x="0" y="0">LoRA</tspan></text>
+    </symbol>
+    <symbol id="i-ai" viewBox="0 0 48 48">
+      <style>
+        .st0 {
+          font-family: UDShinGoPro-DeBold-90ms-RKSJ-H, 'A-OTF UD Shin Go Pro';
+          font-size: 12px;
+          font-weight: 700;
+        }
+      </style>  
+      <path d="M7,35h34V13H7v22ZM7,35V13v22ZM10.5,42v-4h-3.5c-.8,0-1.5-.3-2.1-.9s-.9-1.3-.9-2.1V13c0-.8.3-1.5.9-2.1s1.3-.9,2.1-.9h3.5v-4h3v4h9v-4h3v4h9v-4h3v4h3.5c.8,0,1.5.3,2.1.9s.9,1.3.9,2.1v22c0,.8-.3,1.5-.9,2.1s-1.3.9-2.1.9h-3.5v4h-3v-4h-9v4h-3v-4h-9v4h-3Z"/>
+      <text class="st0" transform="translate(17.5 29.3)"><tspan x="0" y="0">AI</tspan></text>
+    </symbol>
+  </defs>
+</svg>
+<section class="intro-merged">
+  <style>
+    .intro-merged {
+      text-align: justify;
+      font-size: 8pt;
+      line-height: 1.26;
+      font-weight: 780;
+    }
+    .intro-merged .label {
+      display: inline-block;
+      color: var(--darkblue-color);
+      font-weight: 950;
+      margin-right: .6em;
+    }
+  </style>
+  <span class="label">第1回「こみてっく！」における本規制の位置づけ</span>
+  準備会では、2026年時点の社会状況を踏まえ、自由な表現の保障と創作コミュニティの尊重を両立し、参加者同士が健全に交流できる場を守るため、画像・動画生成AIを用いた作品の頒布・展示等に一定の制限を設けます。本規約は、社会情勢の変化や運営リソース等の事情により、次年度以降に変更される可能性があります。<span class="clause">（前文、1条）</span>
+</section>
+<style>
+  .def-cards {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 8px;
+  }
+
+  .def-card {
+    border: 1px solid var(--frame-color);
+    border-radius: 4px;
+    overflow: hidden;
+    min-height: 25mm;
+    background: #fff;
+  }
+  .def1 {
+    --frame-color: var(--darkblue-color); 
+  }
+  
+  .def2 {
+    --frame-color: var(--ii); 
+  }
+  .def-card h2 {
+    margin: 0;
+    background: var(--frame-color);
+    color: white;
+    padding: 1.5mm 2mm;
+    text-align: center;
+    font-size: 9.2pt;
+    font-weight: 900;
+  }
+  
+  .def-card h2 .clause {
+    color: #ffffff;
+  }
+  .def1 .icon svg {
+    width: 90%;
+    fill: var(--frame-color);
+  }
+  .def-body {
+    display: grid;
+    grid-template-columns: 12mm 1fr;
+    gap: 2.2mm;
+    padding: 1.9mm 2.2mm;
+    align-items: center;
+    font-size: 7.45pt;
+    line-height: 1.34;
+    font-weight: 760;
+  }
+  .def2 > div {
+    margin: 8px 0 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .def2 .def-body + .def-body {
+    border-left: 1px dashed var(--frame-color);
+  }
+  .def2 .icon span {
+    color: var(--frame-color);
+  }
+  .def-body > div {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+</style>
+<section class="defs" aria-label="定義">
+  <div class="section-title">
+    <h2>① 本規約の適用範囲</h2>
+    <p>本規約の適用対象となる作品でも、生成AIの使用方法や程度によって取り扱いが異なります。詳細はp.2をご覧ください。</p>
+  </div>
+  <div class="def-cards">
+  <article class="def-card def1">
+    
+    <h2>頒布・展示に一定の制限がある作品</h2>
+      <div class="def-body">
+        <div class="icon">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <use href="#i-ai"/>
+          </svg>
+        </div>
+        <div>
+          画像・<wbr>動画を<wbr>新たに<wbr>生成する、<wbr>また<wbr>は、<wbr>主要な<wbr>視覚<wbr>表現を<wbr>変換する<wbr>技術<wbr>（txt2img、<wbr>img2img、<wbr>txt2vid、<wbr>img2vid等）<wbr>を<wbr>用いた<wbr>作品。<br>
+          審査・<wbr>事前<wbr>提出の<wbr>対象と<wbr>なります。
+        </div>
+      </div>
+    </article>
+
+    <article class="def-card def2">
+      <h2>頒布・展示の制限を受けない作品　<small>詳細はp.2をご覧下さい。</small></h2>
+      <div>
+        <div class="def-body">
+          <div class="icon">
+            <span class="material-symbols-outlined">photo_size_select_large</span>
+          </div>
+          <div>画像・<wbr>動画<wbr>生成AIの<wbr>用途が、<wbr>解像度<wbr>補完、<wbr>ノイズ<wbr>除去、<wbr>色調<wbr>補正、<wbr>背景<wbr>拡張<wbr>など、<wbr>補助的<wbr>な<wbr>処理に<wbr>とどまる<wbr>作品。</div>
+        </div>
+        <div class="def-body">
+          <div class="icon">
+            <span class="material-symbols-outlined">chat_paste_go</span>
+          </div>
+          <div>⽂章<wbr>⽣成AI<wbr>のみを<wbr>補助的に<wbr>⽤いた<wbr>作<wbr>品。<wbr>例えば、<wbr>アイデア<wbr>出し、<wbr>制作<wbr>⼿順の<wbr>相談を<wbr>⾏った<wbr>作品や、<wbr>文章や<wbr>プログラムを<wbr>AI生成<wbr>した<wbr>作品<wbr>など。</div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .icon span{
+    font-size: 2.5rem;
+    color: var(--darkblue-color);
+  }
+  .icon svg{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* prohibition */
+
+  .prohibit{
+    grid-column:1 / -1;
+  }
+  .prohibit-title{
+    font-size: 12pt;
+    font-weight: 900;
+    margin: 0;
+    color: var(--darkblue-color);
+  }    
+  .prohibit-note{
+    color: var(--darkblue-color);
+    font-size: 8pt;
+    font-weight:900;
+    margin: 0 0 4px;
+  }
+  .prohibit-box{
+    border:2px solid red;
+    border-radius: 4px;
+    padding:0 8px;
+    margin-bottom:16px;
+    background: color-mix(in srgb, red 4%, transparent 96%);
+  }
+  .rule-card{
+    min-height:13.5mm;
+    display:grid;
+    grid-template-columns:10.8mm 1fr;
+    gap:2mm;
+    align-items:center;
+  }
+  .rule-card + .rule-card{
+    border-top: 1px solid red;
+  }
+
+  .rule-card.wide{
+    min-height:13.5mm;
+  }
+
+  .rule-icon{
+    position: relative;
+    width:10.8mm;
+    height:10.8mm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .rule-icon .block-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2.5rem;
+    color: red;
+    width: 10.8mm;
+    height: 10.8mm;
+  }
+
+  .rule-icon .object-icon {
+    position: absolute;
+    font-size: 1.5rem;
+    color: black;
+  }
+  .rule-icon svg.object-icon {
+    height: 60%;
+    fill: black;
+  }
+
+  .rule-text h3{
+    margin:0 0 .3mm;
+    font-size:9.35pt;
+    line-height:1.18;
+    font-weight:950;
+    letter-spacing:-.025em;
+  }
+
+  .rule-text p{
+    margin:0;
+    font-size:7.3pt;
+    line-height:1.22;
+    color:#293241;
+    font-weight:760;
+  }
+</style>
+<section class="prohibit" aria-label="禁止事項">
+  <div class="section-title">
+    <h2>② 禁止事項</h2>
+    <p>本項目に該当する場合、生成AIの軽微利用・主体利用を問わず頒布、展示できません。<span class="clause">（5条）</span></p>
+  </div>
+  <div class="prohibit-box">
+
+    <div class="rules">
+      <article class="rule-card">
+        <div class="rule-icon">
+          <span class="material-symbols-outlined">cinematic_blur</span>
+          <span class="block-icon material-symbols-outlined">block</span>
+        </div>
+        <div class="rule-text">
+          <h3>生成AIによる既存作品・既存キャラ等の再現 <span class="clause">（5条ア・イ、6条）</span></h3>
+          <p>特定の作品、キャラクター、公式ビジュアル、ブランドに依拠した生成物の頒布は不可。</p>
+        </div>
+      </article>
+
+      <article class="rule-card">
+        <div class="rule-icon">
+          <span class="object-icon material-symbols-outlined">palette</span>
+          <span class="block-icon material-symbols-outlined">block</span>
+        </div>
+        <div class="rule-text">
+          <h3>他者の画風・作家名の指定 <span class="clause">（5条ア、6条）</span></h3>
+          <p>特定の作者や作風の模倣を前提としたprompt、タグ、指示による生成物の頒布は不可。</p>
+        </div>
+      </article>
+
+      <article class="rule-card">
+        <div class="rule-icon">
+          <span class="object-icon material-symbols-outlined">person</span>
+          <span class="block-icon material-symbols-outlined">block</span>
+        </div>
+        <div class="rule-text">
+          <h3>実在の人物・著名人の無断生成 <span class="clause">（5条ウ、6条）</span></h3>
+          <p>本人の関与、承認があると誤認されうる生成物の頒布は、本人からの明確な同意を必要とします。</p>
+        </div>
+      </article>
+
+      <article class="rule-card">
+        <div class="rule-icon">  
+          <span class="object-icon material-symbols-outlined">image_arrow_up</span>
+          <span class="block-icon material-symbols-outlined">block</span>
+        </div>
+        <div class="rule-text">
+          <h3>権利のない画像・動画を素材とする生成物 <span class="clause">（5条エ、8条、11条）</span></h3>
+          <p>無許諾素材をimg2img、inpaint、ControlNet、reference、追加学習等に用いた生成物の頒布は不可。</p>
+        </div>
+      </article>
+
+      <article class="rule-card">
+        <div class="rule-icon">  
+          <span class="ex-icon">
+            <svg class="object-icon"><use href="#i-lora"/></svg>
+            <span class="block-icon material-symbols-outlined">block</span>
+          </span>
+        </div>
+        <div class="rule-text">
+          <h3>特定作品・キャラ・作者を再現するLoRA等の技術 <span class="clause">（2条カ、5条オ、6条）</span></h3>
+          <p>特定の作品、キャラクター、作者等の再現を主目的とする追加学習物等に用いた生成物や、それ自体の頒布は不可。</p>
+        </div>
+      </article>
+
+      <article class="rule-card">
+        <div class="rule-icon">  
+          <span class="object-icon material-icons">text_snippet</span>
+          <span class="block-icon material-symbols-outlined">block</span>
+        </div>
+        <div class="rule-text">
+          <h3>生成AI利用や制作工程の虚偽申告 <span class="clause">（5条カ、7条、8条）</span></h3>
+          <p>生成AI利用に関する手続き（p.3参照。使用有無、利用態様、素材、工程、提出資料等）について虚偽申告しない。</p>
+        </div>
+      </article>
+
+      <article class="rule-card wide">
+        <div class="rule-icon">  
+          <span class="object-icon material-icons">rotate_left</span>
+          <span class="block-icon material-symbols-outlined">block</span>
+        </div>
+        <div class="rule-text">
+          <h3>確認後の主要画像・動画・外部コンテンツの無断差し替え <span class="clause">（5条キ、12条、13条）</span></h3>
+          <p>審査結果に影響し得る内容の差し替え、追加、削除は不可。QR・URL等で誘導する外部コンテンツの扱いはp.3参照。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="examples" aria-label="例">
+  <style>
+    .example-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 2.8mm;
+      grid-column:1 / -1;
+    }
+    .example {
+      border: 1.4px solid;
+      border-radius: 4px;
+      overflow: hidden;
+      padding-bottom: 0;
+    }
+
+    .example.ng {
+      border-color: red;
+      background: color-mix(in srgb, red 4%, transparent 96%);
+    }
+    .example.ok {
+      border-color: var(--ii);
+      background: color-mix(in srgb, var(--ii) 4%, transparent 96%);
+    }
+
+    .example h2 {
+      margin: 0;
+      color: white;
+      padding: 1.5mm 2mm;
+      text-align: center;
+      font-size: 9.8pt;
+      font-weight: 950;
+    }
+    .example.ng h2 { background: red; }
+    .example.ng li { border-top: 1px solid red; }
+    .example.ng .ex-icon {
+        color: red;
+        font-size: 2rem;
+    }
+    .example.ok h2 { background: var(--ii); }
+    .example.ok li { border-top: 1px solid var(--ii); }
+    .example.ok .ex-icon {
+        color: var(--ii);
+        font-size: 2rem;
+    }
+
+    .example ul {
+      list-style: none;
+      margin: 0;
+      padding: 2.2mm 2.5mm 0;
+    }
+
+    .example li {
+      display: grid;
+      grid-template-columns: 4.5mm 1fr 10mm;
+      gap: 1.4mm;
+      align-items: center;
+      padding: 1.15mm 0;
+      min-height: 10.2mm;
+      font-size: 7.25pt;
+      line-height: 1.27;
+      font-weight: 760;
+    }
+    .example li:first-child { border-top: none; padding-top: 0; }
+
+    .mark {
+      text-align: center;
+      font-size: 9pt;
+      line-height: 1.05;
+      font-weight: 950;
+    }
+    .ng .mark { color: red; }
+    .ok .mark { color: var(--ii); }
+
+    .ex-icon {
+      width: 9mm;
+      height: 9mm;
+      display: grid;
+      place-items: center;
+      fill: red;
+    }
+  </style>
+  <div class="section-title">
+    <h2 class="example-title">③ 規制を受ける例・受けない例</h2>
+    <p class="example-note">自身の作品がどの項目に該当するか不明な場合は、準備会までお問合せ下さい。</p>
+  </div>
+  <div class="example-cards">
+  <article class="example ng">
+    <h2>こみてっく！での頒布・展示ができない作品</h2>
+    <ul>
+      <li>
+        <span class="mark">×</span>
+        <span><strong>特定タグ・作家名を指定したプロンプト：</strong><br>例）hatsune_miku、idol_master、ghiblify、○○風</span>
+        <span class="ex-icon material-icons">text_snippet</span>
+      </li>
+      <li>
+        <span class="mark">×</span>
+        <span><strong>既存キャラクターを再現した作品：</strong>例）色替え、特徴の一部<br>だけを外した作品、既存キャラを容易に想起できる作品</span>
+        <span class="ex-icon material-icons">person_search</span>
+      </li>
+      <li>
+        <span class="mark">×</span>
+        <span><strong>許諾のない素材の加工：</strong><br>例）他者の画像のControlNet、reference、img2imgへの入力</span>
+        <span class="ex-icon material-symbols-outlined">image_arrow_up</span>
+      </li>
+      <li>
+        <span class="mark">×</span>
+        <span><strong>特定再現LoRAにより生成された作品：</strong><br>例）特定のキャラ、作家、絵柄の再現用学習物を用いた作品</span>
+        <svg class="ex-icon"><use href="#i-lora"/></svg>
+        
+      </li>
+      <li>
+        <span class="mark">×</span>
+        <span><strong>上記の基準を満たす外部コンテンツへの誘導：</strong><br>例）url等による、続き、差分、高解像度版等への案内</span>
+        <span class="ex-icon material-icons">dataset_linked</span>
+      </li>
+    </ul>
+  </article>
+
+  <article class="example ok .frame frame-column">
+    <h2>それ単体では不許可とならない作品</h2>
+    <ul>
+      <li>
+        <span class="mark">✓</span>
+        <span><strong>一般的な特徴・時代・技法・法則名を用いたプロンプト：</strong><br>例）long_hair、1990s style、art_nouveau、法則名</span>
+        <span class="ex-icon material-icons">text_snippet</span>
+      </li>
+      <li>
+        <span class="mark">✓</span>
+        <span><strong>背景・装飾や装飾にあたる作品：</strong><br>例） 抽象背景、風景、テクスチャ、装飾カット</span>
+        <span class="ex-icon material-icons">image</span>
+      </li>
+      <li>
+        <span class="mark">✓</span>
+        <span><strong>権利処理済み素材の加工：</strong><br>例） 自作素材、許諾済み素材、利用条件に従うフリー素材</span>
+        <span class="ex-icon material-symbols-outlined">check_box</span>
+      </li>
+      <li>
+        <span class="mark">✓</span>
+        <span><strong>一般的な基盤モデルを活用した作品：</strong><br>例）ChatGPT Images、Nanobanana、Novel AI</span>
+        <span class="ex-icon">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M19 43a11 11 0 1 1 4-21 13 13 0 1 1 23 10 10 10 0 1 1-8 17H20" fill="transparent" stroke="#0c858b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="33" y="39" text-anchor="middle" font-size="12" font-weight="900" fill="#0c858b">AI</text>
+          </svg>
+        </span>
+      </li>
+      <li>
+        <span class="mark">✓</span>
+        <span><strong>通常の活動先案内：</strong><br>例） 一般的なSNS、投稿サイト、ポートフォリオ等への案内</span>
+        <span class="ex-icon material-icons">language</span>
+      </li>
+    </ul>
+  </article>
+  </div>
+</section>

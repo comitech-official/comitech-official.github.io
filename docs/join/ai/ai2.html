@@ -1,0 +1,339 @@
+---
+layout: document
+title: 画像・動画生成AI利用区分の判定について
+subtitle: こみてっく！生成AI利用ルール②
+document-name: 2026年度版
+robots: "noindex, nofollow"
+---
+
+<style>
+@page { size:A4; margin:0; }
+:root{
+  --muted:#4b5563;
+  --guide:#c88500;
+  --purple:#6c4ca0;
+  --soft-main:#fff5f5;
+  --soft-minor:#f3f8ff;
+  --soft-guide:#fff9e9;
+  --line:#d8e1ec;
+
+  --logo-border: #203f87;
+  --ko: #646fb3;
+  --mi: #378dcd;
+  --te: #3bb58e;
+  --kk: #a1a2d0;
+  --ku: #4f84c4;
+  --ii: #0c858b;
+  --te-short: #2a62ae;
+  --ii-short: var(--te);
+
+  --side-color: #bbd4ef;
+  --base-color: #6c9bd2;
+  --zabton-color: #50a4ff;
+  --darkblue-color: #1d298b;
+}
+/* visual examples */
+.examples{height:60mm;display:grid;grid-template-columns:.95fr 1.05fr;gap:3mm;margin-bottom:2mm}
+.example-panel{border:1.6px solid;border-radius:2mm;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.example-panel.main{border-color:red}.example-panel.minor{border-color:var(--darkblue-color)}
+.example-title{height:8.5mm;color:#fff;display:flex;align-items:center;justify-content:center;font-size:10.7pt;font-weight:950}
+.main .example-title{background:linear-gradient(90deg,red,red)}.minor .example-title{background:linear-gradient(90deg,var(--darkblue-color),var(--darkblue-color))}
+.example-copy{height:17mm;padding:2mm 3mm 1.4mm;font-size:7.8pt;line-height:1.38;font-weight:790}
+.example-copy ul{margin:0;padding-left:1.35em}.example-copy li{margin:.25mm 0}
+
+</style>
+<section class="flow">
+  <style>
+    .flow-grid {  
+      display: grid;
+      grid-template-columns: 1fr 4px 16px 4px 1fr;
+      grid-template-rows: auto 4px 16px 4px auto 4px 16px 4px auto 4px 16px 4px auto;
+    }
+    .qbox {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      border: 1px solid var(--darkblue-color);
+      border-radius: 4px;
+      padding: 4px;
+    }
+    .q1 {
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    .q2 {
+      grid-row-start: 5;
+      grid-row-end: 6;
+    }
+    .q3 {
+      grid-row-start: 9;
+      grid-row-end: 10;
+    }
+    .qtag{
+      color:var(--darkblue-color);
+      display:flex;
+      align-items:center;
+      font-size:12.5pt;
+      font-weight:950;
+      padding-left: 0.8rem;
+    }
+    .qtext{padding:2.1mm 2.5mm;display:flex;align-items:center;font-size:9pt;line-height:1.38;font-weight:830}
+    
+    .arrow {
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+    .arrow .label {
+      font-size:8.4pt;
+      line-height:1;
+      font-weight:950;
+      white-space:nowrap;
+    }
+    .down {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      display: flex; 
+    }
+    .down span {
+      color: var(--darkblue-color);
+    }
+    .d1 {
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+    .d2 {
+      grid-row-start: 7;
+      grid-row-end: 8;
+    }
+    .d3 {
+      grid-row-start: 11;
+      grid-row-end: 12;
+    }
+    .d3 span {
+      color: red;
+    }
+    
+    .right{
+      display: flex; 
+      flex-direction: column;
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+    .right span {
+      color: var(--ii);
+    }
+    .right .label{
+      writing-mode: vertical-rl;
+    }
+    .r1{
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    .r2{
+      grid-row-start: 5;
+      grid-row-end: 6;
+    }
+    .r3{
+      grid-row-start: 11;
+      grid-row-end: 12;
+    }
+    .r3 {
+      padding-bottom: 5rem;
+    }
+    .r3 span {
+      color: var(--darkblue-color);
+    }
+
+    .resultbox {
+      grid-row-start: 13;
+      grid-row-end: 14;
+      border-radius: 4px;
+      border: 2px solid var(--frame-color);
+      background: color-mix(in srgb, var(--frame-color) 4%, transparent 96%);
+      position: relative;
+    }
+    .result-none {
+      grid-row-start: 1;
+      grid-row-end: 6;
+      grid-column-start: 5;
+      grid-column-end: 6;
+      --frame-color: var(--ii);
+    }
+    .result-minor {
+      grid-column-start: 5;
+      grid-column-end: 6;
+      --frame-color: var(--darkblue-color);
+      padding-bottom: 6rem;
+    }
+    .result-main {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      --frame-color: red;
+      padding-bottom: 6rem;
+    }
+    .result-head{
+      height:8.6mm;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:14pt;font-weight:950;
+      letter-spacing:.02em;
+      background: var(--frame-color)
+    }
+    .result-body{padding:2.1mm 3mm 2.3mm;font-size:8.7pt;line-height:1.38;font-weight:790}
+    .result-body strong{font-weight:950}
+
+    .mockgrid {
+      display: grid;
+      gap:2mm;
+      padding:1.2mm 3mm 2.2mm;
+      align-items:stretch;
+      position: absolute;
+      height: 6rem;
+      bottom: 0;
+    }
+    .mainmock {
+      grid-template-columns: repeat(3,1fr);
+    }
+    .minormock {
+      grid-template-columns: repeat(4,1fr);
+    }
+    .mock{border:1px solid #9aa8b8;background:#fff;border-radius:1mm;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;min-width:0}
+    .mock-label{position:absolute;left:0;right:0;bottom:0;background:rgba(255,255,255,.94);border-top:1px solid #cbd5e1;text-align:center;padding:.7mm .4mm;font-size:6.6pt;line-height:1.08;font-weight:900;color:#243247}
+    .mock svg{width:100%;height:100%;display:block}
+  </style>
+  <div class="section-title">
+    <h2>④ 判定フローチャート</h2>
+    <p>こみてっく！にて頒布・展示するコンテンツ及び、対象となる外部コンテンツに適用されます。</p>
+  </div>
+  <div class="flow-grid">
+    <div class="qbox q1"><div class="qtag">Q1</div><div class="qtext"><div class="qtext-inner">画像・動画生成AIによって生成・変換された視覚表現を使っていますか？<span class="clause">（2条ア）</span></div></div></div>
+    <div class="qbox q2"><div class="qtag">Q2</div><div class="qtext"><div class="qtext-inner">補助的処理を超えて、新たな視覚表現を生成・実質的に変換していますか？<span class="clause">（2条イ）</span></div></div></div>
+    <div class="qbox q3"><div class="qtag">Q3</div><div class="qtext"><div class="qtext-inner">AI生成物が、頒布物等の内容・商品価値の中心になっていますか？<span class="clause">（2条ウ・エ、7条ウ）</span></div></div></div>
+
+    <div class="resultbox result-none">
+      <div class="result-head">審査・提出の対象外となる作品</div>
+      <div class="result-body">
+      </div>
+      <div class="example-copy">
+        <ul>
+          <li>画像・動画生成AIによる視覚表現を使っていない作品</li>
+          <li>
+            画像・動画生成AIの使用範囲が補助的処理のみにとどまる作品
+            <ul>
+              <li>ただし、使用方法が実質的に新たな表現生成に当たる場合は、異なる判定区分となることがあります。</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="resultbox result-minor">
+      <div class="result-head">生成AI軽微利用作品<small>（事前提出の対象）</small></div>
+      <div class="result-body">
+        AI生成物は作品の一部に使われているが、<strong>主な商品価値を構成しない</strong>作品。 <span class="clause">（2条ウ）</span><br>
+        事前提出についてはp.3をご覧下さい。
+      </div>
+      <div class="example-copy">
+        <span>例）</span>
+        <ul>
+          <li>表紙・挿絵・背景・装飾・アイコン等の一部に使用</li>
+          <li>お品書きや頒布物紹介用ポスターの一部に使用</li>
+        </ul>
+      </div>
+      <div class="mockgrid minormock">
+        <div class="mock"><svg viewBox="0 0 80 82" aria-hidden="true"><rect width="80" height="82" fill="#f5f9ff"/><rect x="9" y="7" width="62" height="62" fill="#fff" stroke="#1557a5" stroke-width="2"/><rect x="13" y="11" width="24" height="22" fill="#8ec7ef"/><path d="M16 29l7-8 5 4 7-9" fill="none" stroke="#fff" stroke-width="2"/><path d="M43 16h22M43 23h18M15 42h50M15 49h50M15 56h38" stroke="#486581" stroke-width="2"/></svg><div class="mock-label">表紙のみに利用</div></div>
+        <div class="mock"><svg viewBox="0 0 80 82" aria-hidden="true"><rect width="80" height="82" fill="#fff"/><rect x="8" y="8" width="64" height="58" fill="#f7f7f7" stroke="#8795a5"/><path d="M16 18h20M16 25h20M16 32h20M16 39h20M16 46h20" stroke="#667788" stroke-width="2"/><rect x="43" y="18" width="22" height="22" fill="#d3e7fa"/><circle cx="54" cy="28" r="7" fill="#8eb7dd"/></svg><div class="mock-label">挿絵・カット</div></div>
+        <div class="mock"><svg viewBox="0 0 80 82" aria-hidden="true"><defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b7dcf4"/><stop offset="1" stop-color="#e7efe5"/></linearGradient></defs><rect width="80" height="82" fill="url(#g2)"/><circle cx="59" cy="18" r="8" fill="#fff7b8"/><path d="M0 53L19 31 32 46 46 27 80 58V82H0z" fill="#739c79"/><rect x="25" y="43" width="30" height="23" fill="#fff" opacity=".83"/><path d="M31 50h18M31 56h13" stroke="#31506f" stroke-width="2"/></svg><div class="mock-label">背景素材</div></div>
+        <div class="mock"><svg viewBox="0 0 80 82" aria-hidden="true"><rect width="80" height="82" fill="#fff"/><text x="40" y="14" text-anchor="middle" font-size="9" font-weight="900" fill="#1557a5">NEW</text><rect x="9" y="20" width="25" height="35" fill="#d9ecfa"/><circle cx="21.5" cy="35" r="7" fill="#90bfe1"/><path d="M40 25h29M40 33h24M40 41h28M40 49h18" stroke="#52697f" stroke-width="2"/><text x="55" y="65" text-anchor="middle" font-size="9" font-weight="900" fill="#111">500円</text></svg><div class="mock-label">お品書き</div></div>
+      </div>
+    </div>
+    <div class="resultbox result-main">
+      <div class="result-head">生成AI主体利用作品<small>（審査対象）</small></div>
+      <div class="result-body">
+        <strong>AI生成物そのものを主に見せる・売る・鑑賞対象にする作品。</strong><br>例：生成AI画集、生成AIイラスト本、CG集、ポスター集など <span class="clause">（2条エ）</span><br>
+        審査手続きについてはp.3をご覧下さい。
+      </div>
+      <div class="example-copy">
+        <span>例）</span>
+        <ul>
+          <li>AI生成イラストやCGを主に収録した画集・作品集</li>
+          <li>AI生成画像を中心に構成したポスター集・カレンダー</li>
+        </ul>
+      </div>
+      <div class="mockgrid mainmock">
+        <div class="mock"><svg viewBox="0 0 100 82" aria-hidden="true"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0d315f"/><stop offset="1" stop-color="#5ec7e8"/></linearGradient></defs><rect width="100" height="82" fill="url(#g1)"/><circle cx="50" cy="34" r="18" fill="#eaf9ff" opacity=".92"/><path d="M32 67c4-16 13-24 18-24s14 8 18 24" fill="#1b527d"/><text x="50" y="12" text-anchor="middle" font-size="9" font-weight="900" fill="#fff">AI ART BOOK</text></svg><div class="mock-label">AI画集</div></div>
+        <div class="mock"><svg viewBox="0 0 100 82" aria-hidden="true"><rect width="100" height="82" fill="#f4f7fb"/><rect x="8" y="7" width="38" height="28" fill="#9ed2f3"/><rect x="54" y="7" width="38" height="28" fill="#ffd4bb"/><rect x="8" y="42" width="38" height="28" fill="#c7e5c2"/><rect x="54" y="42" width="38" height="28" fill="#d7c6f1"/><path d="M13 31l10-11 8 6 10-13" fill="none" stroke="#fff" stroke-width="3"/><circle cx="72" cy="19" r="8" fill="#fff" opacity=".8"/></svg><div class="mock-label">CG集</div></div>
+        <div class="mock"><svg viewBox="0 0 100 82" aria-hidden="true"><rect width="100" height="82" fill="#fff6f7"/><rect x="10" y="8" width="80" height="55" rx="2" fill="#e9a7ad"/><circle cx="50" cy="31" r="15" fill="#fff" opacity=".8"/><path d="M37 57c3-13 9-19 13-19s10 6 13 19" fill="#b51c28"/><text x="50" y="76" text-anchor="middle" font-size="8" font-weight="900" fill="#b51c28">POSTER COLLECTION</text></svg><div class="mock-label">ポスター集</div></div>
+      </div>
+    </div>
+
+
+    <div class="arrow down d1">
+      <span class="label">はい</span>
+      <span class="material-symbols-outlined">south</span>
+    </div>
+    <div class="arrow down d2">
+      <span class="label">はい</span>
+      <span class="material-symbols-outlined">south</span>
+    </div>
+    <div class="arrow down d3">
+      <span class="label">はい</span>
+      <span class="material-symbols-outlined">south</span>
+    </div>
+    <div class="arrow right r1">
+      <span class="label">いいえ</span>
+      <span class="material-symbols-outlined">east</span>
+    </div>
+    <div class="arrow right r2">
+      <span class="label">いいえ</span>
+      <span class="material-symbols-outlined">east</span>
+    </div>
+    <div class="arrow right r3">
+      <span class="label">いいえ</span>
+      <span class="material-symbols-outlined">south_east</span>
+    </div>
+  </div>
+</section>
+
+
+<style>  
+  .warn {
+    --frame-color: red;
+    border-top:2px solid var(--frame-color);
+    border-bottom:2px solid var(--frame-color);
+    align-items:center;
+    padding: 1.1mm 3mm;
+    margin-top: 12px;
+    color:var(--frame-color)
+  }
+  .warntext {
+    font-size: 8.6pt;
+    line-height: 1.3;
+    font-weight: 950;
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+  }
+</style>
+<section class="warn">
+  <div class="warntext"><span class="material-symbols-outlined">error</span>&ensp;禁止行為に該当する場合は、軽微利用・主体利用を問わず頒布・展示・配布・掲示できません。 <span class="clause">（5条）</span></div>
+</section>
+
+
+<section>
+  <style>
+    .red {
+      color: red;
+    }
+  </style>
+  <div class="section-title">
+    <h2>⑤ 判断の目安<small>（7条ウ）</small></h2>
+    <p>
+      AI生成物部分が「作品の一部」なら軽微利用、AI生成物部分そのものが「内容の中心」なら<span class="red">主体利用</span>にあたります。<br>
+      点数、面積、掲載位置、訴求方法を総合的に考慮して判断されます。迷う場合は、<span class="consult">事前に準備会へご相談</span>ください。</p>
+  </div>
+</section>
+

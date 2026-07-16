@@ -2,6 +2,7 @@
 layout: default
 title: 参加詳細
 description: 工大祭即売会準備会「こみてっく！」の参加詳細ページ。
+robots: "noindex, nofollow"
 ---
 　募集要項・日程は決定し次第、本ページやX（[@Comitech_offic](https://x.com/Comitech_offic)）、メーリングリスト等で順次ご案内します。本ページをブックマークしてお待ちください。
 
