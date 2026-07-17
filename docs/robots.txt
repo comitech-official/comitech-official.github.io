@@ -1,0 +1,36 @@
+---
+layout: null
+---
+
+User-agent: Googlebot
+Allow:/
+
+User-agent: Bingbot
+Allow:/
+
+User-agent: GPTBot
+Disallow: assets/images/poster.png
+Allow: /
+
+User-agent: Google-Extended
+Disallow: assets/images/poster.png
+Allow: /
+
+User-agent: Anthropic-ai
+Disallow: assets/images/poster.png
+Allow: /
+
+User-agent: Claude-Web
+Disallow: assets/images/poster.png
+Allow: /
+
+User-agent: CCBot
+Disallow: assets/images/poster.png
+Allow: /
+
+User-agent: FacebookBot
+Disallow: assets/images/poster.png
+Allow: /
+
+User-agent: *
+Allow: /
