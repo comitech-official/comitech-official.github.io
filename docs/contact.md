@@ -16,4 +16,4 @@ robots: "noindex, nofollow"
 　企画メンバー・運営スタッフは現在絶賛募集中です！！（募集要項は[こちら](/staff)）
 
 ### 関連リンク
-　近日公開予定です。
+- ケットコム(同人即売会情報サイト)：[https://ketto.com](https://ketto.com/)
