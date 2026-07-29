@@ -5,14 +5,21 @@
         <meta charset="utf-8">
         <!-- スマホで文字サイズが正常に表示されるための呪文 -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- ogp設定用 -->
+        <!-- og設定 -->
         <meta property="og:title" content={% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} | {{ site.description}}{% endif %}>
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ '/' | absolulte_url }}">
-        <meta property="og:image" content="{{ '/assets/images/ogp.png' | absolulte_url }}">
         <meta property="og:site_name" content="{{ site.title }}">
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:image" content={{ site.url }}/assets/images/twitter_ogp.png>
+
+        <!-- 一般用ogp出し分け -->
+        {% assign ogp = page.ogp_image | default: 'default_ogp.png' %}
+        <meta property="og:image" content="{{ '/assets/images/ogps/' | append: ogp | absolute_url }}">
+
+        <!-- twitter用ogp出し分け -->
+        {% assign ogp = page.ogp_image | default: 'twitter_ogp.png' %}
+        <meta name="twitter:card" content="{% if page.ogp_image %}summary_large_image{% else %}summary{% endif %}">
+        <meta name="twitter:image" content="{{ '/assets/images/ogps/' | append: ogp | absolute_url }}">
+
         <meta property="og:description" content="{{ page.description }}">
         <meta property="og:locale" content="jp">
         {% if page.robots %}
