@@ -35,39 +35,69 @@ description: こみてっく！2026に出展する団体等のごあんない。
 | 委託 |  | PAM |
 
 ### サークルカット
-<style>.sakuka{ width: 300px; max-width: 300px; }</style>
-<img class="sakuka" src="/assets/images/te01/02a.png" alt="机上のCoulombのサークルカット">
+<style>
+.sakuka { 
+    width: 300px; max-width: 300px;
+}
 
-<img class="sakuka" src="/assets/images/te01/02b.png" alt="暗黒通信団のサークルカット">
+.day2 {
+  display: none;
+}
 
-<img class="sakuka" src="/assets/images/te01/03a.png" alt="あるじぇぶらのサークルカット">
+#switch-b:checked ~ .day1 {
+  display: none;
+}
 
-<img class="sakuka" src="/assets/images/te01/03b.png" alt="東京科学大学作問サークルのサークルカット">
+#switch-b:checked ~ .day2 {
+  display: block;
+}
+</style>
 
-<img class="sakuka" src="/assets/images/te01/04a-sat.png" alt="PAMのサークルカット">
+<div class="toggle">
+  <input type="radio" name="switch" id="switch-a" checked>
+  <label for="switch-a">1日目・10月10日(土)</label>
 
-<img class="sakuka" src="/assets/images/te01/04b.png" alt="東京科学大学漫画研究会P-MANのサークルカット">
+  <br>
 
-<img class="sakuka" src="/assets/images/te01/05ab.png" alt="東京科学大学きらら同好会のサークルカット">
+  <input type="radio" name="switch" id="switch-b">
+  <label for="switch-b">2日目・10月11日(日)</label>
 
-<img class="sakuka" src="/assets/images/te01/06ab.png" alt="悪の喰鍵のサークルカット">
+  <br>
+  <br>
 
-<img class="sakuka" src="/assets/images/te01/07a.png" alt="天然ウナギ専門店のサークルカット">
+  <img class="sakuka" src="/assets/images/te01/02a.png" alt="机上のCoulombのサークルカット">
 
-<img class="sakuka" src="/assets/images/te01/07b.png" alt="どんぶりめしのサークルカット">
+  <img class="sakuka" src="/assets/images/te01/02b.png" alt="暗黒通信団のサークルカット">
 
-<img class="sakuka" src="/assets/images/te01/08a-sat.png" alt="ハレハレトリップのサークルカット">
+  <img class="sakuka" src="/assets/images/te01/03a.png" alt="あるじぇぶらのサークルカット">
 
-08b GQuuuuuumund 掲載準備中
+  <img class="sakuka" src="/assets/images/te01/03b.png" alt="東京科学大学作問サークルのサークルカット">
 
-<img class="sakuka" src="/assets/images/te01/09a.png" alt="逆たまごかけごはんのサークルカット">
+  <img class="sakuka day1" src="/assets/images/te01/04a-sat.png" alt="PAMのサークルカット">
 
-<img class="sakuka" src="/assets/images/te01/09b.png" alt="猫倶楽部のサークルカット">
+  <img class="sakuka" src="/assets/images/te01/04b.png" alt="東京科学大学漫画研究会P-MANのサークルカット">
 
-<img class="sakuka" src="/assets/images/te01/itaku01.png" alt="東京科学大無線研究部JA1YADのサークルカット">
+  <img class="sakuka" src="/assets/images/te01/05ab.png" alt="東京科学大学きらら同好会のサークルカット">
 
-<img class="sakuka" src="/assets/images/te01/itaku02.png" alt="SOS団@科学大支部 有志のサークルカット">
+  <img class="sakuka" src="/assets/images/te01/06ab.png" alt="悪の喰鍵のサークルカット">
 
-委託 SF研究会 掲載準備中
+  <img class="sakuka" src="/assets/images/te01/07a.png" alt="天然ウナギ専門店のサークルカット">
 
-<img class="sakuka" src="/assets/images/te01/itaku04-sun.png" alt="PAMのサークルカット">
+  <img class="sakuka" src="/assets/images/te01/07b.png" alt="どんぶりめしのサークルカット">
+
+  <img class="sakuka day1" src="/assets/images/te01/08a-sat.png" alt="ハレハレトリップのサークルカット">
+
+  <img class="sakuka day1" src="/assets/images/te01/08b.png" alt="08b GQuuuuuumund 掲載準備中">
+
+  <img class="sakuka" src="/assets/images/te01/09a.png" alt="逆たまごかけごはんのサークルカット">
+
+  <img class="sakuka" src="/assets/images/te01/09b.png" alt="猫倶楽部のサークルカット">
+
+  <img class="sakuka" src="/assets/images/te01/itaku01.png" alt="東京科学大無線研究部JA1YADのサークルカット">
+
+  <img class="sakuka" src="/assets/images/te01/itaku02.png" alt="SOS団@科学大支部 有志のサークルカット">
+
+  <img class="sakuka day1" src="/assets/images/te01/itaku03.png" alt="委託 SF研究会 掲載準備中">
+
+  <img class="sakuka day2" src="/assets/images/te01/itaku04-sun.png" alt="PAMのサークルカット">
+</div>
