@@ -87,7 +87,7 @@ description: こみてっく！2026に出展する団体等のごあんない。
 
   <img class="sakuka day1" src="/assets/images/te01/08a-sat.png" alt="ハレハレトリップのサークルカット">
 
-  <img class="sakuka day1" src="/assets/images/te01/08b.png" alt="08b GQuuuuuumund 掲載準備中">
+  <img class="sakuka" src="/assets/images/te01/08b.png" alt="08b GQuuuuuumund 掲載準備中">
 
   <img class="sakuka" src="/assets/images/te01/09a.png" alt="逆たまごかけごはんのサークルカット">
 
@@ -97,7 +97,7 @@ description: こみてっく！2026に出展する団体等のごあんない。
 
   <img class="sakuka" src="/assets/images/te01/itaku02.png" alt="SOS団@科学大支部 有志のサークルカット">
 
-  <img class="sakuka day1" src="/assets/images/te01/itaku03.png" alt="委託 SF研究会 掲載準備中">
+  <img class="sakuka" src="/assets/images/te01/itaku03.png" alt="委託 SF研究会 掲載準備中">
 
   <img class="sakuka day2" src="/assets/images/te01/itaku04-sun.png" alt="PAMのサークルカット">
 </div>
