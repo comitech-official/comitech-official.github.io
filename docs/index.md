@@ -3,7 +3,7 @@ layout: default
 title: トップ
 description: 工大祭同人即売会「こみてっく！」のウェブサイト。
 ---
-　本ページの内容は2026年7月15日現在のものです。内容は随時更新いたします。（[公式X：@Comitech_offic](https://x.com/Comitech_offic)）
+　本ページの内容は2026年9月16日現在のものです。内容は随時更新いたします。（[公式X：@Comitech_offic](https://x.com/Comitech_offic)）
 
 ## キービジュアル・ポスターを公開しました！！
 <style>.poster{ width: 100%; max-width: 400px; }</style>

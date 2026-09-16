@@ -8,7 +8,12 @@ description: こみてっく！2026に出展する団体等のごあんない。
 - 西9号館3階 W9-327教室 (東京科学大学 大岡山キャンパス)
 
 ### 会場MAP
-近日中に公開予定です。
+<style>
+  .map { 
+    width: 100%; max-width: 600px;
+  }
+</style>
+<img class="map" src="/assets/images/te01/map.png" alt="こみてっく！2026 会場図">
 
 ### 出展者一覧
 
