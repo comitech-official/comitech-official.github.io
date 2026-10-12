@@ -45,20 +45,8 @@ description: こみてっく！2026に出展する団体等のごあんない。
 
 ### サークルカット
 <style>
-.sakuka-card {
-  
-  width: 100%; max-width: 600px;
-  display: flex;
-  gap: 20px;
-  background-color: var(--side-color);
-  padding: 5px;
-}
-.sakuka-card + .sakuka-card {
-  margin-top: 10px;
-}
-
 .sakuka { 
-    width: 100%; max-width: 300px;
+    width: 300px; max-width: 300px;
 }
 
 .day2 {
@@ -85,23 +73,7 @@ description: こみてっく！2026に出展する団体等のごあんない。
 
   <br>
   <br>
-  
-  <div class="sakuka-card">
-    <img class="sakuka" src="/assets/images/te01/02a.png" alt="机上のCoulombのサークルカット">
-    <div>
-      <h3>机上のCoulomb</h3>
-      <p>コメント：</p>
-      <p>X(旧Twitter)：[test](te01/)</p>
-    </div>
-  </div>
 
-  <div class="sakuka-card">
-    <img class="sakuka" src="/assets/images/te01/02a.png" alt="机上のCoulombのサークルカット">
-    <div>
-      <h3>机上のCoulomb</h3>
-      <p>テスト</p>
-    </div>
-  </div>
   <img class="sakuka" src="/assets/images/te01/02a.png" alt="机上のCoulombのサークルカット">
 
   <img class="sakuka" src="/assets/images/te01/02b.png" alt="暗黒通信団のサークルカット">
