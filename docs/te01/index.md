@@ -3,6 +3,10 @@ layout: default
 title: こみてっく！2026 のご案内
 description: こみてっく！2026に出展する団体等のごあんない。
 ---      
+**こみてっく！2026は終了いたしました。**
+のべ1,289人の一般来場者をお迎えし、大好評をいただきました。
+ありがとうございました！！
+
 ### とき・ところ
 - 2026年 10月10日(土)・11日(日) 10:00 ~ 16:00
 - 西9号館3階 W9-327教室 (東京科学大学 大岡山キャンパス)
@@ -41,8 +45,20 @@ description: こみてっく！2026に出展する団体等のごあんない。
 
 ### サークルカット
 <style>
+.sakuka-card {
+  
+  width: 100%; max-width: 600px;
+  display: flex;
+  gap: 20px;
+  background-color: var(--side-color);
+  padding: 5px;
+}
+.sakuka-card + .sakuka-card {
+  margin-top: 10px;
+}
+
 .sakuka { 
-    width: 300px; max-width: 300px;
+    width: 100%; max-width: 300px;
 }
 
 .day2 {
@@ -69,7 +85,23 @@ description: こみてっく！2026に出展する団体等のごあんない。
 
   <br>
   <br>
+  
+  <div class="sakuka-card">
+    <img class="sakuka" src="/assets/images/te01/02a.png" alt="机上のCoulombのサークルカット">
+    <div>
+      <h3>机上のCoulomb</h3>
+      <p>コメント：</p>
+      <p>X(旧Twitter)：[test](te01/)</p>
+    </div>
+  </div>
 
+  <div class="sakuka-card">
+    <img class="sakuka" src="/assets/images/te01/02a.png" alt="机上のCoulombのサークルカット">
+    <div>
+      <h3>机上のCoulomb</h3>
+      <p>テスト</p>
+    </div>
+  </div>
   <img class="sakuka" src="/assets/images/te01/02a.png" alt="机上のCoulombのサークルカット">
 
   <img class="sakuka" src="/assets/images/te01/02b.png" alt="暗黒通信団のサークルカット">
