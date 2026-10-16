@@ -1,6 +1,6 @@
 ---
 layout: default
-title: こみてっく！2026 アフターレポート
+title: こみてっく！2026アフターレポート
 description: こみてっく！2026 開催の記録
 ---
 
